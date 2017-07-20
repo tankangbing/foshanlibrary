@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 26.0.2">
+
+    <issue
+        id="Instantiatable"
+        severity="Fatal"
+        message="This inner class should be static (com.fy.activity.MsgActivity.CloseMSGReceiver)"
+        category="Correctness"
+        priority="6"
+        summary="Registered class is not instantiatable"
+        explanation="Activities, services, broadcast receivers etc. registered in the manifest file (or for custom views, in a layout file) must be &quot;instantiatable&quot; by the system, which means that the class must be public, it must have an empty public constructor, and if it&apos;s an inner class, it must be a static inner class."
+        errorLine1=" public  class CloseMSGReceiver extends BroadcastReceiver {"
+        errorLine2="               ~~~~~~~~~~~~~~~~">
+        <location
+            file="E:\code\fangyi\foshanlibrary\app\src\main\java\com\fy\activity\MsgActivity.java"
+            line="621"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="Instantiatable"
+        severity="Fatal"
+        message="This inner class should be static (com.fy.activity.MsgActivity.JinjiMSGReceiver)"
+        category="Correctness"
+        priority="6"
+        summary="Registered class is not instantiatable"
+        explanation="Activities, services, broadcast receivers etc. registered in the manifest file (or for custom views, in a layout file) must be &quot;instantiatable&quot; by the system, which means that the class must be public, it must have an empty public constructor, and if it&apos;s an inner class, it must be a static inner class."
+        errorLine1=" public  class JinjiMSGReceiver extends BroadcastReceiver {"
+        errorLine2="               ~~~~~~~~~~~~~~~~">
+        <location
+            file="E:\code\fangyi\foshanlibrary\app\src\main\java\com\fy\activity\MsgActivity.java"
+            line="637"
+            column="16"/>
+    </issue>
+
+</issues>

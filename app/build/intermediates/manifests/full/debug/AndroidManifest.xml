@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fy.wo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_LOGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_TASKS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name="com.fy.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57a984b8e0f55aa71c002d62" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" />
+
+        <activity
+            android:name="com.fy.activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fy.activity.BookActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.BookContent" >
+        </activity>
+        <activity android:name="com.fy.activity.BookTread" >
+        </activity>
+        <activity android:name="com.fy.activity.ActiveActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.ActivityContent" >
+        </activity>
+        <activity
+            android:name="com.fy.activity.CultrueActivity"
+            android:hardwareAccelerated="true" >
+        </activity>
+        <activity
+            android:name="com.fy.activity.WebActivity"
+            android:hardwareAccelerated="true" >
+        </activity>
+        <activity android:name="com.fy.activity.VideoActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.VideoContent" >
+        </activity>
+        <activity android:name="com.fy.activity.VideoContent2" >
+        </activity>
+        <activity android:name="com.fy.activity.VideoWeb" >
+        </activity>
+        <activity android:name="com.fy.activity.VideoWeb2" >
+        </activity>
+        <activity android:name="com.fy.activity.WorkActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.WorkContent" >
+        </activity>
+        <activity android:name="com.fy.activity.MapActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.MapContent" >
+        </activity>
+        <activity android:name="com.fy.activity.KCBActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.KCBListActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.GuoXueActivity" >
+        </activity>
+        <activity
+            android:name="com.fy.activity.MsgActivity"
+            android:hardwareAccelerated="true" >
+        </activity>
+        <activity
+            android:name="com.fy.activity.TestActivity"
+            android:hardwareAccelerated="true" >
+        </activity>
+        <activity android:name="com.fy.activity.MsgSupActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.DepartmentActivity" >
+        </activity>
+        <activity android:name="com.fy.activity.HelpActivity" >
+        </activity>
+        <activity
+            android:name="com.fy.activity.DepartmentContent"
+            android:hardwareAccelerated="true" >
+        </activity>
+
+        <receiver android:name="com.fy.service.OpenReceiver" >
+            <intent-filter>
+                <action android:name="com.fy.Open" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fy.activity.MainActivity$exitReceiver" >
+            <intent-filter>
+                <action android:name="com.fy.exit" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fy.activity.MainActivity$WeatherReceiver" >
+            <intent-filter>
+                <action android:name="com.get.weather" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fy.activity.MsgActivity$CloseMSGReceiver" >
+            <intent-filter>
+                <action android:name="com.fy.closefull" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fy.activity.MsgActivity$JinjiMSGReceiver" >
+            <intent-filter>
+                <action android:name="com.fy.jinji" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fy.tool.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" >
+                </action>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.fy.service.TimeService" >
+        </service>
+        <service android:name="com.fy.service.MsgService" >
+        </service>
+        <service android:name="com.fy.service.WeatherService" >
+        </service>
+    </application>
+
+</manifest>
